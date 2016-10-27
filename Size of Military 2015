@@ -1,0 +1,68 @@
+function () {
+    // Create the chart
+    $('#container-1').highcharts({
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Size of Military 2015'
+        },
+        subtitle: {
+            text: 'Number of servicemen in the latest fiscal year.'
+        },
+        xAxis: {
+            type: ''
+        },
+        yAxis: { ''
+            
+        },
+        legend: {
+            enabled: false
+        },
+        plotOptions: {
+            series: {
+                borderWidth: 0,
+                dataLabels: {
+                    enabled: true,
+                    format: '{point.y:.1f}%'
+                }
+            }
+        },
+
+        tooltip: {
+            headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+            pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>'
+        },
+
+        series: [{
+            name: 'Branches',
+            colorByPoint: true,
+            data: [{
+                name: 'Army',
+                y: 37.8%,
+                drilldown: 'Army'
+            }, {
+                name: 'Navy',
+                y: 22.9%,
+                drilldown: 'Navy'
+            }, {
+                name: 'Marine Corps',
+                y: 13.9%,
+                drilldown: 'Marine Corps'
+            }, {
+                name: 'Air Force',
+                y: 22.6%,
+                drilldown: 'Air Force'
+            }, {
+                name: 'Coast Guard',
+                y: 2.9%,
+                drilldown: 'Coast Guard'
+            }, 
+        }],
+        drilldown: {
+            series: [{
+                name: 'Microsoft Internet Explorer',
+                id: 'Microsoft Internet Explorer',
+                data: [
+
+                ];
