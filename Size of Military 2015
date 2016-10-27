@@ -1,14 +1,17 @@
 function () {
     // Create the chart
-    $('#container-1').highcharts({
+    $.get('size-of-mil', function(csv) {
+        $('#Chart-1-container').highcharts({
         chart: {
-            type: 'column'
+            type: 'column',
+            style:{
+                fontFamily:'Helvetica Neue'
         },
         title: {
-            text: 'Size of Military 2015'
+            text: 'Size of Military 2015',
         },
         subtitle: {
-            text: 'Number of servicemen in the latest fiscal year.'
+            text: 'Number of servicemen in the latest fiscal year.',
         },
         xAxis: {
             type: ''
@@ -22,6 +25,7 @@ function () {
         plotOptions: {
             series: {
                 borderWidth: 0,
+                align: 'left',
                 dataLabels: {
                     enabled: true,
                     format: '{point.y:.1f}%'
@@ -61,8 +65,8 @@ function () {
         }],
         drilldown: {
             series: [{
-                name: 'Microsoft Internet Explorer',
-                id: 'Microsoft Internet Explorer',
+                name: '',
+                id: '',
                 data: [
 
                 ];
